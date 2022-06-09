@@ -1,0 +1,294 @@
+1.some:
+ <script>
+     var arr = [1, 2, 3, 4, 5];
+        var even = (element) => element % 4 === 0;
+            console.log(arr.some(even));
+    </script>
+o/p== true
+
+
+2. FIND
+  <script>
+        var arr = [5, 12, 8, 130, 44];
+            var found = arr.find(element => element > 10);
+                console.log(found);
+    </script
+
+o/p== 12
+
+3.Filter
+  <script>
+        var arr = ['country', 'script', 'founder', 'profile', 'dhoni', 'start'];
+        var result = arr.filter(arr => arr.length > 6);
+        console.log(result);
+    </script>
+
+o/p==  (country', 'founder', 'profile)
+
+4.EVERY
+	<script>
+    		var values = (currentValue) => currentValue < 30;
+        	var arr = [1, 30, 39, 29, 10, 13];
+            	console.log(arr.every(values));
+	</script>
+O/P==  TRUE
+
+5.concat
+		var arr1 = ['book', 'money', 'butter'];
+               var arr2 = ['doctor', 'hello', 'son'];
+               var arr3 = arr1.concat(arr2);
+               console.log(arr3);
+
+0/p== 	0: "book"
+	1: "money"
+	2: "butter"
+	3: "doctor"
+	4: "hello"
+	5: "fun"
+
+6.copyWithin
+	 <script>
+        var arr = ['ironman', 'thor', 'captanAmerica', 'spiderman', 'doctorstrange'];
+                console.log(arr.copyWithin(0,2,5));
+    </script>
+
+o/p==
+
+0: "captanAmerica"
+1: "spiderman"
+2: "doctorstrange"
+3: "spiderman"
+4: "doctorstrange"
+
+7. Entries
+	<script>
+     var arr = ['dina', 'sai', 'bala'];
+               const iterator = arr.entries();
+               console.log(iterator.next().value);
+               console.log(iterator.next().value);
+               console.log(iterator.next().value);
+</script>
+
+o/p==
+	Array(2)
+	0: 0
+	1: "dina"
+	
+	Array(2)
+	0: 1
+	1: "sai"
+	
+	Array(2)
+	0: 2
+	1: "bala"
+
+8. Fill
+	 <script>
+        var arr = [10, 9, 8, 7, 6, 100];
+               console.log(arr.fill(0, 1));
+    </script>
+
+o/p==   Array(6)
+	0: 10
+	1: 0
+	2: 0
+	3: 0
+	4: 0
+	5: 0
+
+9. findIndex
+	<script>
+        var strings  = [66, 24, 56, 99, 45, 690];
+             var index = strings.findIndex(strings => strings === 56);
+              console.log(index);
+              console.log(strings[index]);
+    </script>
+
+o/p==
+	2
+	56
+
+10. Flat
+	<script>
+         var arr = [0, 6, [66, 43]];
+               arr.flat();
+               console.log(arr.flat());
+    </script>
+
+o/p==
+	Array(4)
+	0: 0
+	1: 6
+	2: 66
+	3: 43
+
+11. FlatMap
+	 <script>
+        var num = [4, 8, 12];
+           const doubled = num.flatMap(num => {
+           return num === 4 ? [] : [2 * num];
+           });
+           console.log(doubled);
+    </script>
+
+o/p== Array(2)
+	0: 16
+	1: 24
+
+12. ForEach
+	<script>
+        var arr = ["banglore", 23, "$"];
+            arr.forEach(element => console.log(element));
+    </script>
+
+o/p==
+	banglore
+	 23
+	 $
+
+13. At
+	<script>
+         var arr = [6, 12, 512, 246, 42];
+              let index = 2; 
+              console.log(`Using an index of ${index} the item returned is ${arr.at(index)}`);
+              index = -2;
+              console.log(`Using an index of ${index} item returned is ${arr.at(index)}`);
+    </script>
+
+o/p==
+	Using an index of 2 the item returned is 512
+	Using an index of -2 item returned is 246
+
+
+14.Push
+	<script>
+        var avengers = ['ironman', 'Camerica', 'thor'];
+        var count = avengers.push('hulk');
+        console.log(count);
+        console.log(avengers);
+        avengers.push('Bpanther', 'vision', 'spiderman');
+        console.log(avengers);
+    </script>
+
+o/p== Array(7)
+	0: "ironman"
+	1: "Camerica"
+	2: "thor"
+	3: "hulk"
+	4: "Bpanther"
+	5: "vision"
+	6: "spiderman
+15.pop
+	<script>
+        const plants = ['xmax', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+        console.log(plants.pop());
+               plants.pop();
+        console.log(plants);
+       </script>
+o/p==
+	 ['xmax', 'cauliflower', 'cabbage']
+	0: "xmax"
+	1: "cauliflower"
+	2: "cabbage
+
+16.Shift
+	<script>
+        var arr = [9, 6, 4];
+        var firstElement = arr.shift();
+        console.log(arr);
+    	</script>
+
+o/p==
+	2) [6, 4]
+	0: 6
+	1: 4
+
+17.Reverse
+	<script>
+        var arr = ['babu', 'Dinakar', 'G'];
+        var reversed = arr.reverse();
+        console.log('reversed:', reversed);
+       </script>
+	
+o/p== ['G', 'Dinakar', 'babu']
+	0: "G"
+	1: "Dinakar"
+	2: "babu"
+
+18.join
+	<script>
+        var marvel = ['iron', 'spider', 'man'];
+        console.log(marvel.join(''));
+    </script>
+
+o/p==
+	ironspiderman
+
+19.IndexOf
+	<script>
+        var arr = ['ant', 'bison', 'camel', 'duck',];
+        console.log(arr.indexOf('duck', 2));
+    </script>
+
+o/p==
+	3
+
+20.values
+	<script>
+        var arr = ['spiderman', 'black panther', 'hunter'];
+        var iterator = arr.values();
+        for (const value of iterator) {
+            console.log(value);
+   	 }
+	</script>
+
+o/p==
+	spiderman
+	 black panther
+	 hunter
+	
+22.Slice
+	<script>
+        var arr = ['tiger', 'lion', 'camel', 'monkey', 'elephant'];
+        console.log(arr.slice(2));
+        console.log(arr.slice(2, 4));
+        console.log(arr.slice(2, -1));
+        console.log(arr.slice());
+    </script>
+
+o/p==
+	(3) ['camel', 'monkey', 'elephant']
+	0: "camel"
+	1: "monkey"
+	2: "elephant"
+
+	(2) ['camel', 'monkey']
+	0: "camel"
+	1: "monkey"
+	
+	(2) ['camel', 'monkey']
+	0: "camel"
+	1: "monkey"
+
+	(5) ['tiger', 'lion', 'camel', 'monkey', 'elephant']
+	0: "tiger"
+	1: "lion"
+	2: "camel"
+	3: "monkey"
+	4: "elephant"
+
+24.unshift
+	<script>
+        var arr = [6, 36, 46];
+        console.log(arr.unshift(2, 4));
+        console.log(arr);
+    </script>
+
+o/p==
+	Array(5)
+	0: 2
+	1: 4
+	2: 6
+	3: 36
+	4: 46
+	
